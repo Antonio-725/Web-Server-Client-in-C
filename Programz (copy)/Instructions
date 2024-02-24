@@ -1,0 +1,29 @@
+To compile and run the client and server programs, follow these steps:
+
+### Server Compilation and Execution
+
+1. Compile the Server:
+   gcc -o Server Server.c
+   
+
+2. **Run the Server:**
+  
+   sudo ./Server 80 ( Replace `80` with the port number you want to use for the server.)
+
+
+
+### Client Compilation and Execution
+
+1. **Compile the Client:**
+  gcc -o Client Client.c -Wno-format-truncation
+   
+
+2. **Run the Client:**
+   ./Client -p localhost 80 (Replace `localhost` with the hostname or IP address of the server, and `80` with the port number the server is listening on)
+
+
+### Note:
+- You may need to use `sudo` to run the server if you're binding to a port below 1024.
+- Ensure that there are no other services running on port 80 to avoid conflicts.
+- Make sure to use the correct hostname or IP address for the client to connect to the server.
+- Adjust the firewall settings if necessary to allow communication on the specified port.
